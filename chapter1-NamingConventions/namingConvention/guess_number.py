@@ -1,6 +1,6 @@
 import random
 
-def is_within_bounds(guessedNumber):
+def is_valid_number(guessedNumber):
     if guessedNumber.isdigit() and 1<= int(guessedNumber) <=100:
         return True
     else:
@@ -12,7 +12,7 @@ def main():
     guessed_number=input("Guess a number between 1 and 100:")
     guess_count=0
     while not stop_guessing:
-        if not is_within_bounds(guessed_number):
+        if not is_valid_number(guessed_number):
             guessed_number=input("I wont count this one Please enter a number between 1 to 100")
             continue
         else:
