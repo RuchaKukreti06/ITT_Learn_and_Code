@@ -1,0 +1,6 @@
+Does this Book class follow SRP?
+No, Book class does not follow SRP due to the following reasons:
+-> Save function present in book class: There are multiple reasons for the book class to change.
+   The save functionality should be independent of the book.
+-> getLocation function should be responsibility of library, here it is added in the Book class, therefore the SRP is violated.
+-> Book should focus only on its content and page navigation.
