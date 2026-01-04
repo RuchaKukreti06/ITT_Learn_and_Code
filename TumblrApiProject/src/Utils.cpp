@@ -3,6 +3,7 @@
 #include <stdexcept>
 
 std::string extractJsonFromResponse(const std::string &response) {
+  // Locate and isolate the JSON payload embedded in Tumblr's JS response
   std::regex rgx(R"(var\s+tumblr_api_read\s*=\s*({[\s\S]*});?)");
   std::smatch match;
 
@@ -21,5 +22,6 @@ std::string getBestImageUrl(const rapidjson::Value &photo) {
       return photo[key].GetString();
     }
   }
+  // No usable image found
   return "";
 }

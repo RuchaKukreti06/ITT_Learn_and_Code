@@ -7,6 +7,7 @@
 TumblrClient::TumblrClient(const std::string &blogName) : blog(blogName) {}
 
 std::string TumblrClient::fetchApi(int start, int count) {
+  // Tumblr JSON API endpoint for fetching posts
   std::string url = "https://" + blog +
                     ".tumblr.com/api/read/json?start=" + std::to_string(start) +
                     "&num=" + std::to_string(count);
@@ -42,6 +43,7 @@ std::vector<PostImageResult> TumblrClient::fetchImages(int start, int end) {
   for (auto &post : doc["posts"].GetArray()) {
     if (postNumber > end)
       break;
+    // Skip non-photo posts
     if (std::string(post["type"].GetString()) != "photo") {
       postNumber++;
       continue;
