@@ -22,14 +22,14 @@ public class PaymentProcessor {
   }
 
   public PaymentResult process(PaymentRequest request) {
-    validate(request);
+    validatePaymentRequest(request);
 
     int attempt = 0;
 
     while (attempt < MAX_RETRIES) {
       try {
-        execute(request);
-        record(request);
+        processPayment(request);
+        savePaymentRecord(request);
         notifySuccess(request);
 
         return new PaymentResult(true, PAYMENT_SUCCESS, generateId());
@@ -42,7 +42,7 @@ public class PaymentProcessor {
     return new PaymentResult(false, PAYMENT_FAILED, null);
   }
 
-  private void validate(PaymentRequest request) {
+  private void validatePaymentRequest(PaymentRequest request) {
     if (request.customerId() == null || request.customerId().isBlank()) {
       throw new IllegalArgumentException("Customer ID required");
     }
@@ -53,7 +53,7 @@ public class PaymentProcessor {
     }
   }
 
-  private void execute(PaymentRequest request) {
+  private void processPayment(PaymentRequest request) {
     logger.log("Executing payment of " + request.amount());
 
     if (request.amount().compareTo(new BigDecimal("5000")) > 0) {
@@ -61,7 +61,7 @@ public class PaymentProcessor {
     }
   }
 
-  private void record(PaymentRequest request) {
+  private void savePaymentRecord(PaymentRequest request) {
     history.put(generateId(),
                 new PaymentRecord(request.customerId(), request.amount(),
                                   LocalDateTime.now()));
