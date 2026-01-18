@@ -14,18 +14,20 @@ def is_valid_guess(user_input):
 
 def get_valid_guess():
     while True:
-        guess=input(f"I won't count this one. Please enter a number between {LOWER_LIMIT} and {UPPER_LIMIT}: ")
+        guess = input(
+            f"I won't count this one. Please enter a number between {LOWER_LIMIT} and {UPPER_LIMIT}: "
+        )
         if is_valid_guess(guess):
             return guess
 
 def evaluate_guess(guess, target):
-    guess_result=""
+    guess_result = ""
     if guess < target:
-        guess_result=LOW
+        guess_result = LOW
     elif guess > target:
-        guess_result= HIGH
+        guess_result = HIGH
     else:
-        guess_result=CORRECT
+        guess_result = CORRECT
 
     return guess_result
 
@@ -48,12 +50,12 @@ def guess_the_number():
         number_of_guesses += 1
         guess = int(guess)
 
-        guess_result=evaluate_guess(guess, target_number)
+        guess_result = evaluate_guess(guess, target_number)
         display_guess_result(guess_result, number_of_guesses)
-        
-        if guess_result==CORRECT:
+
+        if guess_result == CORRECT:
             break
-        
+
         guess = get_user_guess()
 
 guess_the_number()
