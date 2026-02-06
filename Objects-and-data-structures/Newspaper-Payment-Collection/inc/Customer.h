@@ -3,20 +3,20 @@
 
 #include <string>
 
-#include "Constant.h"
+#include "CustomerTypes.h"
 #include "Wallet.h"
-#include "types.h"
 
-class Customer {
-private:
-  Name name;
-  Wallet wallet;
+class Customer
+{
+   private:
+    CustomerName customerName;
+    Wallet wallet;
 
-public:
-  Customer(const Name name, double initialMoney);
-  std::string getFirstName() const;
-  std::string getLastName() const;
-  bool pay(double amount);
+   public:
+    Customer(const CustomerName customerName, double balance);
+    std::string getFirstName() const;
+    std::string getLastName() const;
+    bool pay(double amount);
 };
 
 #endif

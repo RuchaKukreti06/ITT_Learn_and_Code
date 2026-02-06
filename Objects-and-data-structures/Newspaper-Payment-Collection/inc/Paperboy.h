@@ -1,11 +1,12 @@
 #ifndef PAPERBOY_H
 #define PAPERBOY_H
 
-class Customer;
+#include "Customer.h"
 
-class Paperboy {
-public:
-  bool collectPayment(Customer &customer, double paymentAmount);
+class Paperboy
+{
+   public:
+    bool collectPayment(Customer& customer, double paymentAmount);
 };
 
 #endif

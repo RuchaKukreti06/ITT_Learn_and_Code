@@ -3,9 +3,10 @@
 
 #include <iostream>
 
-class OutputHandler {
-public:
-  static void showPaymentstatus(bool isPaymentSuccessful);
+class OutputHandler
+{
+   public:
+    static void showPaymentStatus(bool isPaymentSuccessful);
 };
 
 #endif
