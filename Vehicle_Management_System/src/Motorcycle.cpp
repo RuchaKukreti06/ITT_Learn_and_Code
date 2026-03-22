@@ -4,12 +4,12 @@
 
 #include "VehicleConstants.h"
 
-Motorcycle::Motorcycle(const VehicleRecord vehicleRecord, const int fuel)
-    : Vehicle(vehicleRecord), fuelLevel(fuel), hasSidecar(false)
+Motorcycle::Motorcycle(const VehicleRecord vehicleRecord, const int fuelLevel)
+    : Vehicle(vehicleRecord), fuelLevel(fuelLevel), hasSidecar(false)
 {
 }
 
-void Motorcycle::Start()
+void Motorcycle::start()
 {
     if (fuelLevel > 0)
     {
@@ -22,13 +22,13 @@ void Motorcycle::Start()
     }
 }
 
-void Motorcycle::Stop()
+void Motorcycle::stop()
 {
     vehicleRecord.isRunning = false;
     std::cout << vehicleRecord.make << " " << vehicleRecord.model << " stopped.\n";
 }
 
-void Motorcycle::DisplayInfo() const
+void Motorcycle::displayInfo() const
 {
     std::cout << "Motorcycle: " << vehicleRecord.year << " " << vehicleRecord.make << " "
               << vehicleRecord.model << ", Price: $" << vehicleRecord.price
@@ -46,7 +46,7 @@ double Motorcycle::getFuelLevel() const
     return fuelLevel;
 }
 
-void Motorcycle::Refuel(double amount)
+void Motorcycle::refuel(double amount)
 {
     fuelLevel += amount;
     std::cout << "Refueled. Fuel level: " << fuelLevel << "%\n";

@@ -11,13 +11,13 @@ class Motorcycle : public Vehicle, public IFuelOperable
     bool hasSidecar;
 
    public:
-    Motorcycle(const VehicleRecord vehicleRecord, const int fuel);
-    void Start() override;
-    void Stop() override;
-    void DisplayInfo() const override;
+    Motorcycle(const VehicleRecord vehicleRecord, const int fuelLevel);
+    void start() override;
+    void stop() override;
+    void displayInfo() const override;
     double getPrice() const override;
     double getFuelLevel() const override;
-    void Refuel(double amount) override;
+    void refuel(double amount) override;
 };
 
 #endif

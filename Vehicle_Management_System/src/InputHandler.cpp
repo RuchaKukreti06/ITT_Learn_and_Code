@@ -25,7 +25,7 @@ int InputHandler::inputFuelLevel()
     return fuelLevel;
 }
 
-bool InputHandler::inputhasSidecar()
+bool InputHandler::queryHasSidecar()
 {
     bool hasSidecar;
     std::cout << "Enter 1 if Sidecar is present: ";

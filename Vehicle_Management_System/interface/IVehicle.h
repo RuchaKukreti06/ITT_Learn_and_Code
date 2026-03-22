@@ -8,9 +8,9 @@ class IVehicle
 {
    public:
     virtual ~IVehicle() = default;
-    virtual void Start() = 0;
-    virtual void Stop() = 0;
-    virtual void DisplayInfo() const = 0;
+    virtual void start() = 0;
+    virtual void stop() = 0;
+    virtual void displayInfo() const = 0;
     virtual double getPrice() const = 0;
 };
 

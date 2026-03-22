@@ -12,6 +12,8 @@ class Creator
 {
    private:
     std::string name;
+    std::string earningType;
+    int baseAmount;
     int views;
     int subscribers;
     std::vector<std::unique_ptr<IEarningStrategy>> strategies;
@@ -23,7 +25,7 @@ class Creator
     int getSubscribers() const;
     void addStrategy(std::unique_ptr<IEarningStrategy> strategy);
     double calculateTotalEarnings() const;
-    void setCreatorDetails(const CreatorRecord& creatorRecord);
+    void updateDetails(const CreatorRecord& creatorRecord);
 };
 
 #endif

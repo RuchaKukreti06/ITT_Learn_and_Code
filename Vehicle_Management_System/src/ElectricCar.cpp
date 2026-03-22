@@ -8,7 +8,7 @@ ElectricCar::ElectricCar(const VehicleRecord vehicleRecord, const int battery)
     batteryLevel = battery;
 }
 
-void ElectricCar::Start()
+void ElectricCar::start()
 {
     if (batteryLevel > 0)
     {
@@ -21,13 +21,13 @@ void ElectricCar::Start()
         std::cout << "Cannot start - battery dead!\n";
     }
 }
-void ElectricCar::Stop()
+void ElectricCar::stop()
 {
     vehicleRecord.isRunning = false;
     std::cout << vehicleRecord.make << " " << vehicleRecord.model << " stopped.\n";
 }
 
-void ElectricCar::DisplayInfo() const
+void ElectricCar::displayInfo() const
 {
     std::cout << "Electric Car: " << vehicleRecord.year << " " << vehicleRecord.make << " "
               << vehicleRecord.model << ", Price: $" << vehicleRecord.price

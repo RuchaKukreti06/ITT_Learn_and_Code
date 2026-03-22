@@ -12,12 +12,12 @@ class Car : public Vehicle, public IFuelOperable
 
    public:
     Car(const VehicleRecord vehicleRecord, const int fuel);
-    void Start() override;
-    void Stop() override;
-    void DisplayInfo() const override;
+    void start() override;
+    void stop() override;
+    void displayInfo() const override;
     double getPrice() const override;
     double getFuelLevel() const override;
-    void Refuel(double amount) override;
+    void refuel(double amount) override;
 };
 
 #endif

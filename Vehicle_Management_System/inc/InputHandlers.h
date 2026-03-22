@@ -10,7 +10,7 @@ class InputHandler
    public:
     static void inputVehicleDetails(VehicleRecord& vehicleRecord);
     static int inputFuelLevel();
-    static bool inputhasSidecar();
+    static bool queryHasSidecar();
     static int inputBatteryLevel();
 };
 

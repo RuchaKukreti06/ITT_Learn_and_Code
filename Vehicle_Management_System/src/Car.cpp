@@ -7,7 +7,7 @@ Car::Car(const VehicleRecord vehicleRecord, const int fuel) : Vehicle(vehicleRec
     fuelLevel = fuel;
 }
 
-void Car::Start()
+void Car::start()
 {
     if (fuelLevel > 0)
     {
@@ -20,13 +20,13 @@ void Car::Start()
     }
 }
 
-void Car::Stop()
+void Car::stop()
 {
     vehicleRecord.isRunning = false;
     std::cout << vehicleRecord.make << " " << vehicleRecord.model << " stopped.\n";
 }
 
-void Car::DisplayInfo() const
+void Car::displayInfo() const
 {
     std::cout << "Car" << vehicleRecord.year << " " << vehicleRecord.make << " "
               << vehicleRecord.model << ", Price: $" << vehicleRecord.price
@@ -43,7 +43,7 @@ double Car::getFuelLevel() const
     return fuelLevel;
 }
 
-void Car::Refuel(double FuelAmount)
+void Car::refuel(double FuelAmount)
 {
     fuelLevel += FuelAmount;
     std::cout << "Refueled: " << fuelLevel << "%\n";

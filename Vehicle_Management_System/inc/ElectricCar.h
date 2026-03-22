@@ -11,9 +11,9 @@ class ElectricCar : public Vehicle, public IElectricOperable
 
    public:
     ElectricCar(const VehicleRecord vehicleRecord, const int battery);
-    void Start() override;
-    void Stop() override;
-    void DisplayInfo() const override;
+    void start() override;
+    void stop() override;
+    void displayInfo() const override;
     double getPrice() const override;
     double getBatteryLevel() const override;
     void charge(double batteryUnit) override;

@@ -6,6 +6,8 @@
 struct CreatorRecord
 {
     std::string name;
+    std::string earningType;
+    double baseAmount;
     int views;
     int subscribers;
 };

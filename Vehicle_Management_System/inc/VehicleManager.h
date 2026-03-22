@@ -12,10 +12,10 @@ class VehicleManager
     std::vector<std::unique_ptr<Vehicle>> vehicles;
 
    public:
-    void AddVehicle(std::unique_ptr<Vehicle> vehicle);
-    void DisplayAll() const;
-    double TotalValue() const;
-    void StartAll();
+    void addVehicle(std::unique_ptr<Vehicle> vehicle);
+    void displayAll() const;
+    double totalValue() const;
+    void startAll();
 };
 
 #endif

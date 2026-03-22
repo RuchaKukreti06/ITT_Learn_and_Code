@@ -2,24 +2,24 @@
 
 #include <iostream>
 
-void VehicleManager::AddVehicle(std::unique_ptr<Vehicle> vehicle)
+void VehicleManager::addVehicle(std::unique_ptr<Vehicle> vehicle)
 {
     vehicles.push_back(std::move(vehicle));
 }
 
-void VehicleManager::DisplayAll() const
+void VehicleManager::displayAll() const
 {
-    for (const auto& vehicle : vehicles) vehicle->DisplayInfo();
+    for (const auto& vehicle : vehicles) vehicle->displayInfo();
 }
 
-double VehicleManager::TotalValue() const
+double VehicleManager::totalValue() const
 {
     double totalValue = 0;
     for (const auto& vehicle : vehicles) totalValue += vehicle->getPrice();
     return totalValue;
 }
 
-void VehicleManager::StartAll()
+void VehicleManager::startAll()
 {
-    for (auto& vehicle : vehicles) vehicle->Start();
+    for (auto& vehicle : vehicles) vehicle->start();
 }

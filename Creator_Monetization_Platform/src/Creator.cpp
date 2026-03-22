@@ -33,9 +33,11 @@ double Creator::calculateTotalEarnings() const
     return total;
 }
 
-void Creator::setCreatorDetails(const CreatorRecord& creatorRecord)
+void Creator::updateDetails(const CreatorRecord& creatorRecord)
 {
     name = creatorRecord.name;
     subscribers = creatorRecord.subscribers;
+    earningType = creatorRecord.earningType;
+    baseAmount = creatorRecord.baseAmount;
     views = creatorRecord.views;
 }
