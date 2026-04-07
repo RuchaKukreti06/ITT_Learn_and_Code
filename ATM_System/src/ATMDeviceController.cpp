@@ -61,11 +61,12 @@ DeviceRecord ATMDeviceController::retrieveDeviceRecord(int handle)
 
 double ATMDeviceController::getBalance(const std::string& accountId) const
 {
-    return 1000.0;
+    return DeviceConstants::DEMO_BALANCE;
 }
 
 void ATMDeviceController::dispenseCash(int handle, double amount)
 {
+    std::cout << "Dispensing $" << amount << " from device " << handle << std::endl;
 }
 
 bool DeviceRecord::isSuspended() const
