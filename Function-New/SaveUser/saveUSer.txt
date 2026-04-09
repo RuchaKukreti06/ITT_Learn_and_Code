@@ -1,0 +1,9 @@
+No, the code is not following the Single Responsibility Principle.
+
+Reasons:
+
+The function saveUser performs multiple tasks:
+    a> Validating the user within the saveUser function itself is another responsibility.
+    b> Inserting the user into the database, that is, saving in the database.
+    c> Creating the filePath in the saveUser, which is not aligned with the saving functionality.
+    d> Writing the user data on the file, together with other operations in the same function.
