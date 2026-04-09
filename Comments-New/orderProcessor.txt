@@ -1,0 +1,28 @@
+ // This method processes an order : Redundant Comment
+ // Check if order is null : Redundant Comment
+ // Validate the order : Redundant Comment
+ // Check inventory : Redundant Comment
+ // If no inventory, return failure : Redundant Comment
+ // Reserve inventory : Redundant Comment
+ // Process payment : Redundant Comment
+ // Check if payment succeeded : Redundant Comment
+ // Update inventory : Redundant Comment
+ // Send confirmation email : Redundant Comment
+ // Return success : Noise Comment
+ // Payment failed, release inventory : Redundant Comment
+ // Return failure : Noise Comment
+ // Something went wrong : Noise Comment
+ // Log the error : Redundant Comment
+ // Throw it : Redundant Comment
+ // TODO: Fix this later : Bad TODO, Mumbling Comment
+ // Added by John on 12/15/2023 - needed for the new feature : Journal Comment, attributions and by-lines
+ // Get the order : Redundant Comment
+ // John says we need to refund here : Misleading, Mumbling Comment
+ // Refund the payment : Redundant Comment
+ // Give back the items : Redundant Comment
+ // Update status : Redundant Comment
+ // This is important!!! : Mumbling Comment
+ // Gets order by ID : Redundant Comment
+ // Implementation here : Mumbling, Noisy Comment
+ // Saves the order : Redundant Comment
+ // Implementation here : Mumbling, Noisy Comment
