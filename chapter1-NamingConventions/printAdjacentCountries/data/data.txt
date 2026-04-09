@@ -1,0 +1,16 @@
+IN,Pakistan,China,Nepal,Bhutan,Myanmar,Bangladesh
+PK,India,Afghanistan,Iran,China
+CN,Russia,Mongolia,Kazakhstan,Kyrgyzstan,Tajikistan,Afghanistan,Pakistan,India,Nepal,Bhutan,Myanmar,Laos,Vietnam,Cambodia
+US,Canada,Mexico
+CA,United States
+MX,United States,Guatemala,Belize
+FR,Spain,Belgium,Luxembourg,Germany,Switzerland,Italy,Monaco,Andorra
+DE,Denmark,Netherlands,Belgium,Luxembourg,France,Switzerland,Austria,Czech Republic,Poland
+IT,France,Switzerland,Austria,Slovenia,Vatican City,San Marino
+ES,Portugal,France,Andorra
+BR,Argentina,Bolivia,Peru,Colombia,Venezuela,French Guiana,Suriname,Uruguay,Paraguay
+AR,Chile,Bolivia,Paraguay,Brazil,Uruguay
+RU,Norway,Finland,Estonia,Latvia,Lithuania,Poland,Belarus,Ukraine,Georgia,Azerbaijan,Kazakhstan,China,Mongolia,North Korea
+AU
+JP
+UK,Ireland
