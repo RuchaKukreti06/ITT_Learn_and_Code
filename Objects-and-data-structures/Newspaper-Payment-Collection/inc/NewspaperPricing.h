@@ -1,0 +1,6 @@
+#ifndef NEWSPAPER_PRICING_H
+#define NEWSPAPER_PRICING_H
+
+const double SUBSCRIPTION_FEE = 500;
+
+#endif
