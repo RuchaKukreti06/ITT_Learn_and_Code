@@ -1,4 +1,4 @@
 void fun()
 {
-    int a[10];
+    int a[100];
 }
