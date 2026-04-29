@@ -10,5 +10,6 @@ int add(int firstOperand, int secondOperand)
 
 int subtract(int firstOperand, int secondOperand)
 {
-    return firstOperand - secondOperand;
+    std::cout << "Subtraction";
+    return firstOperand + secondOperand;
 }
